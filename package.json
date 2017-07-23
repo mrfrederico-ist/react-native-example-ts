@@ -1,0 +1,37 @@
+{
+  "name": "starter-react-native-expo-all-ts",
+  "version": "0.1.0",
+  "description": "Starter project for react-native (web/electron/ios/android/)",
+  "private": true,
+  "license": "MIT",
+  "devDependencies": {
+    "jest-expo": "18.0.0",
+    "jest-expo-ts": "18.0.1",
+    "react-native-scripts": "0.0.40",
+    "react-native-typescript-transformer": "^1.0.11",
+    "react-test-renderer": "16.0.0-alpha.12",
+    "tslint-config-prettier": "^1.1.0",
+    "bunyan": "1.8.10"
+  },
+  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
+  "scripts": {
+    "start": "react-native-scripts start",
+    "eject": "react-native-scripts eject",
+    "android": "react-native-scripts android",
+    "ios": "react-native-scripts ios",
+    "test": "node node_modules/jest/bin/jest.js --watch"
+  },
+  "jest": {
+    "preset": "jest-expo-ts"
+  },
+  "dependencies": {
+    "@types/jest": "^20.0.2",
+    "@types/react": "^15.0.31",
+    "@types/react-native": "^0.44.12",
+    "@types/react-test-renderer": "^15.5.1",
+    "expo": "^18.0.2",
+    "react": "16.0.0-alpha.12",
+    "react-native": "0.45.1",
+    "tslib": "^1.7.1"
+  }
+}
