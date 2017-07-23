@@ -1,5 +1,5 @@
 {
-  "name": "starter-react-native-expo-all-ts",
+  "name": "react-native-advance-course",
   "version": "0.1.0",
   "description": "Starter project for react-native (web/electron/ios/android/)",
   "repository": "git@github.com:mrfrederico-ist/starter-react-native-expo-all-ts.git",
@@ -44,6 +44,7 @@
     "react-dom": "^15.6.1",
     "react-native": "0.45.1",
     "react-native-web": "^0.0.113",
+    "styled-components": "^2.1.1",
     "tslib": "^1.7.1",
     "typescript": "^2.4.2"
   }
