@@ -1,33 +1,61 @@
-# create-react-native-app with typescript
+# React Native for Web, Desktop, Android and IOS - Boilerplate
 
-## Install
-`npm i -D react-native-typescript-transformer jest-expo-ts`
+## Overview
 
-## Configure Typescript
-`tsc --init`
+An easy and simple way to configure `react-native` for `web, desktop, android and ios`.
 
-`npm i -S @types/react @types/react-native @types/react-test-renderer @types/jest`
-
-## Configure Expo
-app.json
+## Quick start
 ```
-{"expo": {
-    "sdkVersion": "18.0.0",
-    "packagerOpts": {
-      "sourceExts": [
-        "ts",
-        "tsx"
-      ],
-      "transformer": "node_modules/react-native-typescript-transformer"
-    }
-  }
-}
+git clone --depth 1 https://github.com/mrfrederico-ist/starter-react-native-expo-all-ts.git
+cd starter-react-native-expo-all-ts
+yarn install
 ```
 
-## Configure Jest
-package.json
+### Required only for Web and Desktop
+```
+install react@16.0.0-alpha.6 manually in the folder node_modules/react-native-web/node_modules
+```
 
-`  "jest": {
-    "preset": "jest-expo-ts"
-  },
-`
+### Web
+```
+yarn tsc-watch
+# in another terminal
+yarn web
+```
+Open `http://localhost:3000/`
+
+### Desktop with electron
+
+```
+yarn tsc-watch
+# in another terminal
+yarn web
+# in another terminal
+cd electron
+yarn install
+yarn start
+```
+
+### Android
+
+```
+yarn start
+# in another terminal
+yarn android (simulator)
+```
+
+### IOS
+
+```
+yarn start
+# in another terminal
+yarn ios (simulator)
+```
+
+## CONTRIBUTING
+
+PR, stars ✭ and issue reporting, welcome!
+
+## LICENSE
+
+MIT
