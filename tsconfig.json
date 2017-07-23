@@ -11,19 +11,26 @@
       "es2015",
       "es2016"
     ],
+    "declaration": false,
+    "noResolve": false,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
     "allowSyntheticDefaultImports": true,
     "moduleResolution": "node",
     "noEmitHelpers": true,
     "importHelpers": true,
     "strict": true,
     "noImplicitReturns": true
-    //"allowJs": true,
-    ////"inlineSourceMap": true,
-    ////"sourceRoot": "src",
-    //"watch": true.
-    //"noUnusedLocals": true
   },
+  "include": [
+    "./src/**/*"
+  ],
   "exclude": [
+    "src/**/__tests__/*",
     "libs",
     "node_modules",
     "build",
