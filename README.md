@@ -1,4 +1,4 @@
-# React Native for Web, Desktop, Android and IOS - Boilerplate
+# React Native Expo for Web, Desktop, Android and IOS
 
 ## Overview
 
