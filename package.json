@@ -6,6 +6,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/react-hot-loader": "^3.0.3",
+    "@types/react-test-renderer": "^15.5.2",
     "babel-loader": "^7.1.1",
     "bunyan": "1.8.10",
     "jest-expo": "^19.0.0",
@@ -28,7 +29,7 @@
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
     "web": "webpack-dev-server --config web/webpack.config.js",
-    "test": "node node_modules/jest/bin/jest.js --watch"
+    "test": "node node_modules/jest/bin/jest.js"
   },
   "jest": {
     "preset": "jest-expo-ts"
@@ -37,7 +38,6 @@
     "@types/jest": "^20.0.2",
     "@types/react": "^15.0.31",
     "@types/react-native": "^0.46.6",
-    "@types/react-test-renderer": "^15.5.1",
     "expo": "^18.0.2",
     "react": "16.0.0-alpha.12",
     "react-dom": "^15.6.1",

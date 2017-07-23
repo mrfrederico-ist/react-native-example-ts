@@ -68,7 +68,7 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-test-renderer@^15.5.1":
+"@types/react-test-renderer@^15.5.2":
   version "15.5.2"
   resolved "https://registry.yarnpkg.com/@types/react-test-renderer/-/react-test-renderer-15.5.2.tgz#422a51a3a1750616f8ca5440d3591ab381d7f1e1"
   dependencies:
@@ -3264,8 +3264,8 @@ indent-string@^2.1.0:
     repeating "^2.0.0"
 
 indent-string@^3.0.0, indent-string@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/indent-string/-/indent-string-3.1.0.tgz#08ff4334603388399b329e6b9538dc7a3cf5de7d"
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/indent-string/-/indent-string-3.2.0.tgz#4a5fd6d27cc332f37e5419a504dbb837105c9289"
 
 indexof@0.0.1:
   version "0.0.1"
