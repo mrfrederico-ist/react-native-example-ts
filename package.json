@@ -2,6 +2,7 @@
   "name": "starter-react-native-expo-all-ts",
   "version": "0.1.0",
   "description": "Starter project for react-native (web/electron/ios/android/)",
+  "repository": "git@github.com:mrfrederico-ist/starter-react-native-expo-all-ts.git",
   "private": true,
   "license": "MIT",
   "devDependencies": {
