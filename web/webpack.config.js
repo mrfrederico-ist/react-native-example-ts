@@ -28,7 +28,9 @@ module.exports = {
           path.resolve(__dirname, '..', 'index.web.js'),
           path.resolve(__dirname, '..', 'src'),
           path.resolve(__dirname, '../node_modules/react-native-vector-icons'),
-          path.resolve(__dirname, '../node_modules/react-native-tab-view')
+          path.resolve(__dirname, '../node_modules/react-native-tab-navigator'),
+          path.resolve(__dirname, '../node_modules/react-native-side-menu'),
+          path.resolve(__dirname, '../node_modules/react-native-elements'),
         ],
         loader: 'babel-loader?+cacheDirectory'
       },

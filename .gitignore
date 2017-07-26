@@ -20,6 +20,16 @@ dist/
 #
 .jest/
 
+# firebase
+#
+.firebaserc
+firebase-debug.log
+one-time-password/functions/serviceAccount.json
+
+# twilio
+#
+one-time-password/functions/src/twilio.ts
+
 # BUCK
 buck-out/
 \.buckd/

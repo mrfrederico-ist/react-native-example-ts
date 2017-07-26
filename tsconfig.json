@@ -4,6 +4,7 @@
     "module": "commonjs",
     "outDir": "build/dist",
     "sourceMap": true,
+    "allowJs": true,
     "experimentalDecorators": true,
     "jsx": "react",
     "lib": [
