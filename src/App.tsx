@@ -1,26 +1,69 @@
 import * as React from 'react'
-import { Text } from 'react-native'
+import { Platform, StatusBar } from 'react-native'
+import {
+  TabNavigator,
+  StackNavigator,
+  TabNavigatorConfig,
+} from 'react-navigation'
 import styled from 'styled-components/native'
 
+import {
+  WelcomeScreen,
+  AuthScreen,
+  MapScreen,
+  DeckScreen,
+  ReviewScreen,
+  SettingsScreen,
+} from './screens'
+
+// constants ======
+const STATUS_BAR_HEIGHT = StatusBar.currentHeight ? StatusBar.currentHeight : 0
+
+// routes ===========
+const TAB_NAVIGATOR_CONFIG: TabNavigatorConfig = {
+  tabBarPosition: 'bottom',
+  lazy: true,
+}
+
+const MainNavigator = TabNavigator(
+  {
+    welcome: { screen: WelcomeScreen },
+    auth: { screen: AuthScreen },
+    main: {
+      screen: TabNavigator(
+        {
+          map: { screen: MapScreen },
+          deck: { screen: DeckScreen },
+          review: {
+            screen: StackNavigator({
+              review: { screen: ReviewScreen },
+              settings: { screen: SettingsScreen },
+            }),
+          },
+        },
+        TAB_NAVIGATOR_CONFIG,
+      ),
+    },
+  },
+  TAB_NAVIGATOR_CONFIG,
+)
+
+// styles ===========
+const Container = styled.View`
+  flex: 1;
+  margin-top: ${Platform.OS === 'android' ? STATUS_BAR_HEIGHT : 0}px;
+`
+
+// ==================
 class App extends React.Component {
   public render() {
     return (
       <Container>
-        <Text>Open up App.ts to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
+        <MainNavigator />
       </Container>
     )
   }
 }
-
-// styles ===========
-const Container = styled.View`
-  align-items: center;
-  background-color: #fff;
-  flex: 1;
-  justify-content: center;
-`
 
 // ==================
 export default App

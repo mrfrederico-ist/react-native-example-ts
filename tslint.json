@@ -2,10 +2,12 @@
   "extends": [ "tslint:recommended", "tslint-react", "tslint-config-prettier" ],
   "rules": {
     "align": [ true, "parameters", "arguments", "statements" ],
+    "curly": false,
     "no-empty": false,
     "no-var-requires": false,
     "ordered-imports": false,
     "object-literal-sort-keys": false,
+    "trailing-comma": [true, {"multiline": "always", "singleline": "never"}],
     "interface-name": [ true, "never-prefix" ],
     "max-line-length": [ true, 80 ],
     "member-ordering": [
