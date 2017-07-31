@@ -43,4 +43,4 @@ const Container = styled.View`
 `
 
 // ================
-export { ReviewScreen }
+export default ReviewScreen

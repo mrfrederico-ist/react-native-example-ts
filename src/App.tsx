@@ -5,16 +5,16 @@ import {
   StackNavigator,
   TabNavigatorConfig,
 } from 'react-navigation'
+import { Provider } from 'react-redux'
 import styled from 'styled-components/native'
 
-import {
-  WelcomeScreen,
-  AuthScreen,
-  MapScreen,
-  DeckScreen,
-  ReviewScreen,
-  SettingsScreen,
-} from './screens'
+import store from './store'
+import WelcomeScreen from './screens/WelcomeScreen'
+import AuthScreen from './screens/AuthScreen'
+import MapScreen from './screens/MapScreen'
+import DeckScreen from './screens/DeckScreen'
+import ReviewScreen from './screens/ReviewScreen'
+import SettingsScreen from './screens/SettingsScreen'
 
 // constants ======
 const STATUS_BAR_HEIGHT = StatusBar.currentHeight ? StatusBar.currentHeight : 0
@@ -23,6 +23,7 @@ const STATUS_BAR_HEIGHT = StatusBar.currentHeight ? StatusBar.currentHeight : 0
 const TAB_NAVIGATOR_CONFIG: TabNavigatorConfig = {
   tabBarPosition: 'bottom',
   lazy: true,
+  animationEnabled: false,
 }
 
 const MainNavigator = TabNavigator(
@@ -45,7 +46,10 @@ const MainNavigator = TabNavigator(
       ),
     },
   },
-  TAB_NAVIGATOR_CONFIG,
+  {
+    navigationOptions: { tabBarVisible: false },
+    ...TAB_NAVIGATOR_CONFIG,
+  },
 )
 
 // styles ===========
@@ -58,9 +62,11 @@ const Container = styled.View`
 class App extends React.Component {
   public render() {
     return (
-      <Container>
-        <MainNavigator />
-      </Container>
+      <Provider store={store}>
+        <Container>
+          <MainNavigator />
+        </Container>
+      </Provider>
     )
   }
 }

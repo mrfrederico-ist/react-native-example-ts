@@ -67,7 +67,7 @@ const Text = styled.Text`
 `
 
 const ButtonStyled = styled(Button)`
-  marginTop: 15px;
+  margin-top: 15px;
 `
 
 // ===============

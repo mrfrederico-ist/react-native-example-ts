@@ -3,20 +3,19 @@
     "target": "es5",
     "module": "commonjs",
     "outDir": "build/dist",
+    "lib": [ "dom", "es2015", "es2016" ],
+    "baseUrl": ".",
+    "paths": {
+      "*": [ "src/typings/*" ]
+    },
     "sourceMap": true,
     "allowJs": true,
     "experimentalDecorators": true,
     "jsx": "react",
-    "lib": [
-      "dom",
-      "es2015",
-      "es2016"
-    ],
     "declaration": false,
     "noResolve": false,
     "forceConsistentCasingInFileNames": true,
     "noImplicitThis": true,
-    "noImplicitAny": true,
     "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true,
@@ -27,9 +26,7 @@
     "strict": true,
     "noImplicitReturns": true
   },
-  "include": [
-    "./src/**/*"
-  ],
+  "include": [ "./src/**/*" ],
   "exclude": [
     "src/**/__tests__/*",
     "libs",
@@ -40,8 +37,5 @@
     "webpack",
     "jest",
     "src/setupTests.ts"
-  ],
-  "types": [
-    "typePatches"
   ]
 }

@@ -1,24 +1,24 @@
 import * as React from 'react'
-import { Text } from 'react-native'
-import styled from 'styled-components/native'
+import { View } from 'react-native'
+import { connect } from 'react-redux'
 
-class DeckScreen extends React.Component {
+import { StoreState } from '../store'
+
+// types ==========
+interface Props {
+  jobs: object[]
+}
+
+// ================
+class DeckScreen extends React.Component<Props> {
   public render() {
-    return (
-      <Container>
-        <Text>DeckScreen</Text>
-      </Container>
-    )
+    return <View />
   }
 }
 
-// styles ===========
-const Container = styled.View`
-  align-items: center;
-  background-color: #fff;
-  flex: 1;
-  justify-content: center;
-`
-
 // ================
-export { DeckScreen }
+const mapStateToProps = ({ jobs }: StoreState) => {
+  return { jobs: jobs.results }
+}
+
+export default connect<{}, Props, {}>(mapStateToProps)(DeckScreen)

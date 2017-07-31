@@ -21,4 +21,4 @@ const Container = styled.View`
 `
 
 // ================
-export { SettingsScreen }
+export default SettingsScreen

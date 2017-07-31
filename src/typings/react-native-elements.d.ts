@@ -2,12 +2,11 @@ declare module 'react-native-elements' {
   import * as React from 'react'
   import { ViewStyle, TextStyle } from 'react-native'
   
-  // by me ========
+  // TODO:
   export const Card: any
   export const FormLabel: any
   export const FormInput: any
   
-  // ==============
   export interface TextProps {
     /**
      * font size 40
