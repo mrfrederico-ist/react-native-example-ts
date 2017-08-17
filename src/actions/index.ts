@@ -8,3 +8,4 @@ export type Actions =
   | AuthActions.FacebookLoginSuccessAction
   | AuthActions.FacebookLoginFailAction
   | JobActions.FetchJobsAction
+  | JobActions.LikeJobAction

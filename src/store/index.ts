@@ -3,12 +3,13 @@ import thunk from 'redux-thunk'
 
 import reducers from '../reducers'
 import { AuthState } from '../reducers/authReducer'
-import { JobsState } from '../reducers/jobsReducer'
+import { Job } from '../screens/DeckScreen'
 
 // types ======
 export interface StoreState {
   auth: AuthState
-  jobs: JobsState
+  jobs: Job[]
+  likedJobs: Job[]
 }
 
 const store = createStore(reducers, {}, compose(applyMiddleware(thunk)))

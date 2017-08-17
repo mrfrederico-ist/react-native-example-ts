@@ -4,11 +4,12 @@ import * as qs from 'qs'
 import reverseGeocode = require('latlng-to-zip')
 
 import { Region } from '../screens/MapScreen'
-
 import { StoreState } from '../store'
+import { Job } from '../screens/DeckScreen'
 
 // constants =======
 export const FETCH_JOBS = 'FETCH_JOBS'
+export const LIKE_JOB = 'LIKE_JOB'
 
 const JOB_ROOT_URL = 'http://api.indeed.com/ads/apisearch?'
 
@@ -27,6 +28,11 @@ export interface FetchJobsAction {
   payload: object[]
 }
 
+export interface LikeJobAction {
+  type: typeof LIKE_JOB
+  payload: Job
+}
+
 // =================
 export const fetchJobs = (region: Region, cb: () => void) => async (
   dispatch: Dispatch<StoreState>,
@@ -37,10 +43,15 @@ export const fetchJobs = (region: Region, cb: () => void) => async (
     const url = `${JOB_ROOT_URL}${query}`
 
     const { data } = await axios.get(url)
-    
-    dispatch({ type: FETCH_JOBS, payload: data })
+
+    dispatch({ type: FETCH_JOBS, payload: data.results })
     cb()
   } catch (error) {
     console.log({ error })
   }
 }
+
+export const likeJob = (job: Job): LikeJobAction => ({
+  type: LIKE_JOB,
+  payload: job,
+})

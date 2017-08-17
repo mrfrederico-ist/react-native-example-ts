@@ -24,6 +24,7 @@ const TAB_NAVIGATOR_CONFIG: TabNavigatorConfig = {
   tabBarPosition: 'bottom',
   lazy: true,
   animationEnabled: false,
+  swipeEnabled: false,
 }
 
 const MainNavigator = TabNavigator(
